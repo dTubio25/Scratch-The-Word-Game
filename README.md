@@ -9,9 +9,6 @@ Scratch the Word is a fun and interactive word-guessing game where players scrat
 - **Game Completed Modal**: Congratulates the player when all words are completed.
 - **Responsive Design**: Works seamlessly on different screen sizes.
 
-## Screenshots
-![Game Screenshot](![image](https://github.com/user-attachments/assets/72518895-9fad-45e2-959e-846514b72f7c)
-)
 
 ## How to Play
 1. Enter your name to start the game.
@@ -23,5 +20,5 @@ Scratch the Word is a fun and interactive word-guessing game where players scrat
 ## Visit the Game
 You can play the game directly by visiting the following link:
 
-[Play Scratch the Word](scratch-the-word-game-p280yutgq-danahs-projects-1c825f89.vercel.app)
+[Play Scratch the Word](https://dtubio25.github.io/Scratch-The-Word-Game/)
 
