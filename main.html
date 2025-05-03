@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCRATCH THE WORD</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="scripts/word-list.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+</head>
+<body> 
+    <header>
+        <h1 class="header-title-text"><span>S</span>cra<span>t</span>ch <span>T</span>he <span>W</span>or<span>d</span></h1>
+    </header>
+    <button class="quit-button" onclick="quitGame()">
+        <i class="fas fa-sign-out-alt"></i>
+    </button>    
+    <div class="name-overlay">
+        <div class="name-container">
+            <label>Enter Your Name:</label>
+            <input type="text" id="playerName" placeholder="Your name" autocomplete="off" autocorrect="off" spellcheck="false">
+            <p id="error-message" style="color: red; font-size: 0.9rem; display: none;">Please enter your name!</p>
+            <button onclick="startGame()">Start Game</button>
+        </div>
+    </div>
+    <div id="quit-modal" class="quit-modal">
+        <div class="quit-content">
+            <h3>Are you sure you want to quit?</h3>
+            
+            <div class="quit-button-yes">
+                <button onclick="confirmQuit()">Yes</button>
+            </div>
+            
+            <div class="quit-button-no">
+                <button onclick="closeQuitModal()">No</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="leaderboard">
+        <h2>🏆 Leaderboard</h2>
+        <button class="clear-leaderboard" onclick="openPasswordModal()">Clear Records</button>        <p><strong>Player:</strong> <span id="playerDisplay">---</span></p>
+        <ul class="leaderboard-list" id="leaderboardList"></ul>
+    </div>
+        <div id="password-modal" class="password-modal">
+            <div class="password-content">
+                <h3>Enter Admin Password</h3>
+                <input type="password" id="adminPasswordInput" placeholder="Enter password">
+                <p id="password-error-message" style="color: red; font-size: 0.9rem; display: none;"></p>
+                <div class="password-buttons">
+                    <button onclick="submitPassword()">Submit</button>
+                    <button onclick="closePasswordModal()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="game-modal">
+        <div class="content">
+            <img src="" class="result-gif" alt="result-gif">
+            <h4>Game Over!</h4>
+            <p>The correct word was: <b class="correct-word"></b></p>
+            <div class="buttons">
+                <button class="next-level" style="display: none;">Next Level</button> 
+                <button class="try-again" style="display: none;">Try Again</button> 
+                <button class="quit-modal-button" style="display: none;">Quit Game</button>
+            </div>            
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="game-info">
+            <h2 class="lives">Lives: <span class="lives-display"></span></h2>
+            <h2 class="score">Score: <span class="score-display"><b>0</b></span></h2>
+        </div>        
+
+        <div class="game-box">
+            <ul class="word-display"></ul>
+            <p id="guideText">Scratch the area to reveal the hint!</p>  
+            <div class="hint-container">
+                <h4 class="hint-text">Hint: <b id="hintText"></b></h4>
+                <canvas id="scratchCanvas"></canvas>
+            </div>                                             
+            <div class="keyboard"></div>
+        </div>
+
+    </div>
+
+    <div id="game-completed-modal" class="game-modal1" style="display: none;">
+        <div class="content">
+            <h4>🎉 Congratulations! You Completed the Game! 🎉</h4>
+            <p>Your final score: <b id="final-score"></b></p>
+            <div class="buttons">
+                <button onclick="restartGame()">Restart Game</button>
+                <button onclick="returnToHome()">Return to Home</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
