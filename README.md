@@ -1,4 +1,4 @@
-🧠Scratch the Word 🎉
+ # 🧠Scratch the Word 🎉
 
 Scratch the Word is a fun and interactive word-guessing game where players scratch the screen to reveal hints and guess the hidden word. Test your vocabulary and enjoy the challenge!
 
